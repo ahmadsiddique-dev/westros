@@ -1,6 +1,7 @@
 import { User } from "../models/user.model.js";
 import { ErrorApi } from "../utils/errorAPI.js";
 import { ApiResponse } from "../utils/responseAPI.js";
+import jwt from "jsonwebtoken";
 
 const handleLogin = async (req, res) => {
     const { email, password } = req.body;
@@ -110,21 +111,67 @@ const handleLogout = async (req, res) => {
         throw new ErrorApi(404, "Missing User id");
     }
 
-    await User.findByIdAndUpdate(_id, { refreshToken: null})
+    await User.findByIdAndUpdate(_id, { refreshToken: null });
 
     const options = {
         httpOnly: true,
         secure: process.env.NODE_ENV === "prod",
     };
-    
-    res
-    .status(200)
-    .clearCookie("refreshToken", options)
-    .json(
-        new ApiResponse(200, {}, "User Logged out successfully")
-    )
+
+    res.status(200)
+        .clearCookie("refreshToken", options)
+        .json(new ApiResponse(200, {}, "User Logged out successfully"));
 };
 
-const handleRefresh = async (req, res) => {};
+const handleRefresh = async (req, res) => {
+    const refreshToken = req.cookies?.refreshToken;
+
+    if (!refreshToken) {
+        throw new ErrorApi(401, "Refresh Token not found");
+    }
+
+    try {
+        const decoded = jwt.verify(
+            refreshToken,
+            process.env.REFRESH_TOKEN_SECRET
+        );
+
+        const user = await User.findById(decoded._id);
+
+        if (!user) {
+            throw new ErrorApi(404, "User not found");
+        }
+
+        if (user.refreshToken !== refreshToken) {
+            throw new ErrorApi(403, "Invalid refresh token");
+        }
+
+        const newAccessToken = user.generateAccessToken();
+        const newRefreshToken = user.generateRefreshToken();
+
+        user.refreshToken = newRefreshToken;
+        await user.save({ validateBeforeSave: false });
+
+        const options = {
+            httpOnly: true,
+            secure: process.env.NODE_ENV === "prod",
+            sameSite: "Strict",
+        };
+
+        res.status(200)
+            .cookie("refreshToken", newRefreshToken, options)
+            .json(
+                new ApiResponse(
+                    200,
+                    {
+                        accessToken: newAccessToken,
+                    },
+                    "Access token refreshed successfully"
+                )
+            );
+    } catch (error) {
+        throw new ErrorApi(403, "Invalid or expired refresh token");
+    }
+};
 
 export { handleLogin, handleSignup, handleRefresh, handleLogout };
