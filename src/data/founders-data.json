@@ -1,0 +1,163 @@
+[
+  {
+    "name": "Brandon the Builder",
+    "role": "Founder / Hero",
+    "associated_house": "House Stark",
+    "notability": "Credited with building Winterfell and the Wall.",
+    "notes": "Legendary figure of the Age of Heroes, ancestor of House Stark."
+  },
+  {
+    "name": "Lann the Clever",
+    "role": "Founder / Hero",
+    "associated_house": "House Lannister",
+    "notability": "Acquired Casterly Rock by cunning.",
+    "notes": "Legendary progenitor of House Lannister."
+  },
+  {
+    "name": "The Grey King",
+    "role": "Ruler / Hero",
+    "associated_house": "House Greyjoy",
+    "notability": "Slew the sea dragon Nagga, taught men to sail.",
+    "notes": "Mythical ruler of the Iron Islands; claimed ancestor of Ironborn houses."
+  },
+  {
+    "name": "Garth Greenhand",
+    "role": "High King / Ancestor",
+    "associated_house": null,
+    "notability": "Taught farming and settlement; ancestor of many houses.",
+    "notes": "Legendary High King of the First Men."
+  },
+  {
+    "name": "Garth the Gardener",
+    "role": "Founder / King",
+    "associated_house": "House Gardener",
+    "notability": "First King of the Reach.",
+    "notes": "Son of Garth Greenhand; founder of House Gardener."
+  },
+  {
+    "name": "Durran Godsgrief",
+    "role": "Founder / King",
+    "associated_house": "House Durrandon",
+    "notability": "Built Storm’s End.",
+    "notes": "Legendary first Storm King; ancestor of House Durrandon."
+  },
+  {
+    "name": "The Winged Knight",
+    "role": "Hero",
+    "associated_house": "House Arryn (mythical)",
+    "notability": "Fought giants; ancient protector of the Vale.",
+    "notes": "Mythical hero from early Vale legends."
+  },
+  {
+    "name": "Ellyn Ever‑Sweet",
+    "role": "Legendary Ancestor",
+    "associated_house": "House Beesbury",
+    "notability": "First beekeeper in Westeros.",
+    "notes": "Said to have a pact with the King of Bees."
+  },
+  {
+    "name": "Florys the Fox",
+    "role": "Legendary Ancestor",
+    "associated_house": "House Florent",
+    "notability": "Known for trickery; kept three husbands unaware.",
+    "notes": "Ancestor of House Florent and related houses."
+  },
+  {
+    "name": "Gilbert of the Vines",
+    "role": "Legendary Ancestor",
+    "associated_house": "House Redwyne",
+    "notability": "Taught grape wine production.",
+    "notes": "Mythical progenitor of House Redwyne."
+  },
+  {
+    "name": "Harlon the Hunter",
+    "role": "Legendary Ancestor",
+    "associated_house": "House Tarly",
+    "notability": "Early famed hunter.",
+    "notes": "Linked to origin stories around Horn Hill."
+  },
+  {
+    "name": "Herndon of the Horn",
+    "role": "Legendary Ancestor",
+    "associated_house": "House Tarly",
+    "notability": "Legendary hunter alongside Harlon.",
+    "notes": "Part of Horn Hill mythic ancestry."
+  },
+  {
+    "name": "Bors the Breaker",
+    "role": "Legendary Hero",
+    "associated_house": "House Bulwer",
+    "notability": "Fabled warrior.",
+    "notes": "Linked with heroic tales of the age."
+  },
+  {
+    "name": "John the Oak",
+    "role": "Legendary Hero",
+    "associated_house": "House Oakheart",
+    "notability": "Mythical woodsman / warrior.",
+    "notes": "Part of regional heroic legends."
+  },
+  {
+    "name": "Rowan Gold‑Tree",
+    "role": "Legendary Hero",
+    "associated_house": "House Rowan",
+    "notability": "Heroic figure tied to ancient tales.",
+    "notes": "Linked to lore in the Reach."
+  },
+  {
+    "name": "Maris the Maid",
+    "role": "Legendary Heroine",
+    "associated_house": "House Marbrand",
+    "notability": "Famed heroine in lore.",
+    "notes": "Part of localized heroic tradition."
+  },
+  {
+    "name": "Owen Oakenshield",
+    "role": "Legendary Hero",
+    "associated_house": "House Oakheart",
+    "notability": "Warrior figure from ancient tales.",
+    "notes": "Mythic ancestor of Oakheart lines."
+  },
+  {
+    "name": "Foss the Archer",
+    "role": "Legendary Hero",
+    "associated_house": null,
+    "notability": "Famed archer in lore.",
+    "notes": "Mentioned among heroic figures."
+  },
+  {
+    "name": "Rose of Red Lake",
+    "role": "Legendary Heroine",
+    "associated_house": null,
+    "notability": "Fabled figure associated with Red Lake myths.",
+    "notes": "Her story is part of regional legend."
+  },
+  {
+    "name": "Symeon Star‑Eyes",
+    "role": "Legendary Warrior",
+    "associated_house": null,
+    "notability": "Blind warrior famed in songs.",
+    "notes": "Part of the Age of Heroes heroic list."
+  },
+  {
+    "name": "Serwyn of the Mirror Shield",
+    "role": "Legendary Knight",
+    "associated_house": null,
+    "notability": "Mythic knight with magical shield.",
+    "notes": "Often cited in legendary lists."
+  },
+  {
+    "name": "Florian the Fool",
+    "role": "Legendary Figure",
+    "associated_house": null,
+    "notability": "Tragic or comic figure of lore.",
+    "notes": "Mentioned in tales of old."
+  },
+  {
+    "name": "Jonquil",
+    "role": "Legendary Hero",
+    "associated_house": null,
+    "notability": "Lesser‑known heroic figure.",
+    "notes": "Appears in mythic Age of Heroes lists."
+  }
+]
