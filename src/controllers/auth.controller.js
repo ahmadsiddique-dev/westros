@@ -146,16 +146,14 @@ const handleRefresh = async (req, res) => {
             throw new ErrorApi(403, "Invalid refresh token");
         }
 
-        const newAccessToken = user.generateAccessToken();
-        const newRefreshToken = user.generateRefreshToken();
-
+        const newAccessToken = await user.generateAccessToken();
+        const newRefreshToken = await user.generateRefreshToken();
         user.refreshToken = newRefreshToken;
         await user.save({ validateBeforeSave: false });
 
         const options = {
             httpOnly: true,
             secure: process.env.NODE_ENV === "prod",
-            sameSite: "Strict",
         };
 
         res.status(200)
@@ -175,3 +173,4 @@ const handleRefresh = async (req, res) => {
 };
 
 export { handleLogin, handleSignup, handleRefresh, handleLogout };
+
